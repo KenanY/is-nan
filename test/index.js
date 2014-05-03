@@ -22,14 +22,14 @@ test('returns `false` for non NaNs', function(t) {
     return index ? isNaN(value) : isNaN();
   });
 
-  t.ok(!isNaN(arguments));
-  t.ok(!isNaN([1, 2, 3]));
-  t.ok(!isNaN(true));
-  t.ok(!isNaN(new Date));
-  t.ok(!isNaN({'a': 1}));
-  t.ok(!isNaN(0));
-  t.ok(!isNaN(/x/));
-  t.ok(!isNaN('a'));
+  t.notOk(isNaN(arguments));
+  t.notOk(isNaN([1, 2, 3]));
+  t.notOk(isNaN(true));
+  t.notOk(isNaN(new Date));
+  t.notOk(isNaN({'a': 1}));
+  t.notOk(isNaN(0));
+  t.notOk(isNaN(/x/));
+  t.notOk(isNaN('a'));
 
   t.deepEqual(expected, actual);
 });
